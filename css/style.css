@@ -1,0 +1,26 @@
+div #navbartop
+{
+    padding-left: 100px;
+}
+navbar {
+    height: 100px;
+}
+
+body {
+    margin-top: 110px;
+}
+.nav-item{ 
+    color: white;
+    }
+.nav-link :hover {
+        color: cornflowerblue;
+    }
+    
+    .card {
+        margin-top: 500px;
+        background-color: black;
+    }
+    .card-img-top{
+        margin-top: 500px;
+    }
+    
