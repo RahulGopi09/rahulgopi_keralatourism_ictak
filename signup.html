@@ -118,8 +118,13 @@
                                                  <div class="cols-sm-10">
                                                      <div class="input-group">
                                                          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                                         <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
-                                                     </div>
+                                                         <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" onkeyup="passwordchk();"/>
+                                                         <div>
+                                                          Strength:
+                                                          <div class="figure" id="strength_human">apples</div>    
+                                                          (<div class="figure" id="strength_score">bananas</div>)
+                                                      </div>
+                                                        </div>
                                                  </div>
                                              </div>
                                              <div class="form-group">
@@ -157,6 +162,8 @@
         var goodColor = "#66cc66";
         var badColor = "#ff6666";
 
+        var strength = {0: "Worst",1: "Bad",2: "Weak",3: "Good",4: "Strong"}
+
 
         
 
@@ -166,6 +173,7 @@
             //alert("inside vald");
            // null2();
             checkPhone();
+           // passwordchk();
             
          // pvalidate();
           
@@ -256,6 +264,59 @@ function null2()
 
       }
        
+       
+      
+
+      function scorePassword(pass) {
+    var score = 0;
+    if (!pass)
+        return score;
+
+    // award every unique letter until 5 repetitions
+    var letters = new Object();
+    for (var i=0; i<pass.length; i++) {
+        letters[pass[i]] = (letters[pass[i]] || 0) + 1;
+        score += 5.0 / letters[pass[i]];
+    }
+
+    // bonus points for mixing it up
+    var variations = {
+        digits: /\d/.test(pass),
+        lower: /[a-z]/.test(pass),
+        upper: /[A-Z]/.test(pass),
+        nonWords: /\W/.test(pass),
+    }
+
+    variationCount = 0;
+    for (var check in variations) {
+        variationCount += (variations[check] == true) ? 1 : 0;
+    }
+    score += (variationCount - 1) * 10;
+
+    return parseInt(score);
+}
+
+function checkPassStrength(pass) {
+    var score = scorePassword(pass);
+    if (score > 80)
+        return "strong";
+    if (score > 60)
+        return "good";
+    if (score >= 30)
+        return "weak";
+
+    return "";
+}
+
+$(document).ready(function() {
+    $("#password").on("keypress keyup keydown", function() {
+        var pass = $(this).val();
+        $("#strength_human").text(checkPassStrength(pass));
+        $("#strength_score").text(scorePassword(pass));
+    });
+});
+       
+      
        
 
 
