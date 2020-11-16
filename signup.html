@@ -5,62 +5,294 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Kerala Tourism</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-    <script
-			  src="https://code.jquery.com/jquery-3.5.1.js"
-			  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/stylereg.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  
         
     <link rel="shortcut icon" href="./images/favicon.ico">
 
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-			<div class="col-md-5 mx-auto">
-			
-			  <div id="second">
-			      <div class="myform form ">
-                        <div class="logo mb-3">
-                           <div class="col-md-12 text-center">
-                              <h1 >Signup</h1>
-                           </div>
-                        </div>
-                        <form action="#" name="registration">
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">First Name</label>
-                              <input type="text"  name="firstname" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Enter Firstname">
-                           </div>
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">Last Name</label>
-                              <input type="text"  name="lastname" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter Lastname">
-                           </div>
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">Email address</label>
-                              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                           </div>
-                           <div class="form-group">
-                              <label for="exampleInputEmail1">Password</label>
-                              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
-                           </div>
-                           <div class="col-md-12 text-center mb-3">
-                              <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Get Started For Free</button>
-                           </div>
-                           <div class="col-md-12 ">
-                              <div class="form-group">
-                                 <p class="text-center"><a href="#" id="signin">Already have an account?</a></p>
-                              </div>
-                           </div>
-                            </div>
-                        </form>
-                     </div>
-			</div>
-		</div>
-      </div>
+    <!-- Navbar -->
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <div class="title">
+            <a class="navbar-brand" href="index.html">
+                <img src="./images/keralo.png" width="160" height="40" alt="" loading="lazy">
+              </a>
+            </div>
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+        
+        
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="signup.html">SignUp</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="district.html" id="navbarDropdown"  >
+                Districts
+              </a>
+            
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+
+      </nav>
+      <!-- Nav bar ends  -->
+
+      <!-- form -->
 
 
+      <div class="container">
+         <div class="row justify-content-center">
+                             <div class="col-md-8">
+                                 <div class="card">
+                                     <div class="card-header center"><b>Register</b></div>
+                                     <label class="text-center">Valid information is required to register. <span class="req"><small><font color="red">required *</font> </small></span></label>
+
+                                     <div class="card-body">
+         
+                                         <form class="form-horizontal" method="post" action="#" >
+         
+                                             <div class="form-group">
+                                                 <label for="name" class="cols-sm-2 control-label">Your Name<span class="req"><font color="red">*</font> </span></label>
+                                                 <div class="cols-sm-10">
+                                                     <div class="input-group">
+                                                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="form-group">
+                                                 <label for="email" class="cols-sm-2 control-label">Your Email<span class="req"><font color="red">*</font> </span></label>
+                                                 <div class="cols-sm-10">
+                                                     <div class="input-group">
+                                                         <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                         <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" /><span class="msg error">Not a valid email address</span><span class="msg success">A valid email address!</span>
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="form-group">
+                                              <label for="phone" class="cols-sm-2 control-label">Phone Number<span class="req"><font color="red">*</font> </span></label>
+                                              <div class="cols-sm-10">
+                                                  <div class="input-group">
+                                                      <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                                      <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter your Phone number" />
+                                                  </div>
+                                              </div>
+                                          </div>
+                                             <div class="form-group">
+                                                 <label for="username" class="cols-sm-2 control-label">Username<span class="req"><font color="red">*</font> </span></label>
+                                                 <div class="cols-sm-10">
+                                                     <div class="input-group">
+                                                         <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                                         <input type="text" class="form-control" name="username" id="username" placeholder="Enter your Username" />
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="form-group">
+                                                 <label for="password" class="cols-sm-2 control-label">Password<span class="req" required><font color="red">*</font> </span></label>
+                                                 <div class="cols-sm-10">
+                                                     <div class="input-group">
+                                                         <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                         <input type="password" class="form-control" name="password" id="password" placeholder="Enter your Password" />
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="form-group">
+                                                 <label for="confirm" class="cols-sm-2 control-label">Confirm Password<span class="req"><font color="red">*</font> </span></label>
+                                                 <div class="cols-sm-10">
+                                                     <div class="input-group">
+                                                         <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                                         <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirm your Password" />
+                                                     </div>
+                                                 </div>
+                                             </div>
+                                             <div class="form-group ">
+                                                 <button type="button" class="btn btn-primary btn-lg btn-block login-button" onclick="validater();">Register</button>
+                                                 <button type="button" class="btn" onclick="reset();">Reset</button>
+                                                </div>
+                                             <div class="login-register">
+                                                 <a href="login.html">Login</a>
+                                             </div>
+                                         </form>
+                                     </div>
+         
+                                 </div>
+                             </div>
+                         </div>
+         </div>
+
+      <!-- form ends  -->
+      <script>
+        var name=document.getElementById("name").value;
+        var email=document.getElementById("email").value;
+        var phone=document.getElementById("phone").value;
+        var username=document.getElementById("username").value;
+        var password=document.getElementById("password").value;
+        var confirm=document.getElementById("confirm").value;
+        var goodColor = "#66cc66";
+        var badColor = "#ff6666";
+
+
+        
+
+          function validater()
+          {
+            emailval();
+            //alert("inside vald");
+           // null2();
+            checkPhone();
+            
+         // pvalidate();
+          
+          }
+
+          function checkPhone() {
+            //alert("inside phone");
+            var phone=document.getElementById("phone").value;
+
+            if (phone == "") { 
+           alert( 
+              "Phone number field is empty"); 
+            phone.focus(); 
+            return false; 
+             } 
+             else
+             {
+              if(phone.length==10){
+                   //var validate = true;
+                   var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if(phone.match(phoneno)) {
+              alert("Phone number is OK..");
+              return true;
+            }
+            else {
+              alert("Phone number is INVALID..");
+              return false;
+            }
+              } else {
+                  alert('Please put 10  digit mobile number');
+                  //var validate = false;
+              }
+              
+
+             }
+            
+          }
+
+          function emailval()
+          {
+           // alert("inside email");
+            
+            var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            if(email.match(mailformat))
+            {
+            alert("Valid email address!");
+           // document.form.email.focus();
+            return true;
+            }
+            else
+            {
+            alert("You have entered an invalid email address!");
+            //document.form.email.focus();
+            return false;
+            }
+            
+          }
+
+
+        function pvalidate()
+        {
+          if(pass == pass2.value){
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = "Passwords Match"
+        }else{
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = "Passwords Do Not Match!"
+        }
+
+        }
+function null2()
+{
+  if (name == "" || email == ""|| username == "" || password == "" || confirm == "") { 
+           alert("Some of required fields are empty..."); 
+            name.focus(); 
+            return false; 
+        } 
+
+
+         
+        if (password != confirm) { 
+            window.alert("Passwords don't match"); 
+            password.focus(); 
+            return false; 
+        } 
+
+      }
+       
+       
+
+
+
+
+       function reset() {
+  //document.getElementById('input_field').value = '';
+  alert("Values Reset. Done.");
+      document.getElementsByTagName("input").value = "";
+
+      //   document.getElementById("name").value='';
+      //   document.getElementById("email").value='';
+      //   document.getElementById("phone").value='';
+      //   document.getElementById("username").value='';
+      //   document.getElementById("password").value='';
+      //  document.getElementById("confirm").value='';
+
+
+  }
+
+      </script>
+
+
+
+      <!-- footer -->
+      <!-- Footer -->
+<footer class="page-footer font-small blue">
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> Keralatourism.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+      <!-- footer end -->
 
     
 </body>

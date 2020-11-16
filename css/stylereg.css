@@ -1,0 +1,17 @@
+body{
+    background-image: url('../../images/kerareg4.jpg');
+   
+}
+.container {
+    margin-top: 50px;
+}
+
+.msg {
+    display: none;
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
