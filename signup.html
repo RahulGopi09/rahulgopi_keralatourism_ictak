@@ -91,7 +91,7 @@
                                                  <div class="cols-sm-10">
                                                      <div class="input-group">
                                                          <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                                         <input type="text" class="form-control" name="email" id="email" placeholder="Enter your Email" /><span class="msg error">Not a valid email address</span><span class="msg success">A valid email address!</span>
+                                                         <input type="text" class="form-control" name="email" id="email" onblur=" emailval();" placeholder="Enter your Email" /><span class="msg error">Not a valid email address</span><span class="msg success">A valid email address!</span>
                                                      </div>
                                                  </div>
                                              </div>
@@ -169,11 +169,11 @@
 
           function validater()
           {
-            emailval();
+           // emailval();
             //alert("inside vald");
-           // null2();
+            null2();
             checkPhone();
-           // passwordchk();
+            passwordchk();
             
          // pvalidate();
           
@@ -214,28 +214,37 @@
 
           function emailval()
           {
-           // alert("inside email");
+          //  // alert("inside email");
             
-            var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-            if(email.match(mailformat))
-            {
-            alert("Valid email address!");
-           // document.form.email.focus();
-            return true;
-            }
-            else
-            {
-            alert("You have entered an invalid email address!");
-            //document.form.email.focus();
+          //   var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+          //   if(email.match(mailformat))
+          //   {
+          //   alert("Valid email address!");
+          //  // document.form.email.focus();
+          //   return true;
+          //   }
+          //   else
+          //   {
+          //   alert("You have entered an invalid email address!");
+          //   //document.form.email.focus();
+          //   return false;
+          //   }
+          var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(email) == false) 
+        {
+            alert('Invalid Email Address');
             return false;
-            }
+        }
+
+        return true;
             
           }
 
 
         function pvalidate()
         {
-          if(pass == pass2.value){
+          if(password == confirm){
         pass2.style.backgroundColor = goodColor;
         message.style.color = goodColor;
         message.innerHTML = "Passwords Match"
